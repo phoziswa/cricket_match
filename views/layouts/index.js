@@ -27,6 +27,13 @@ app.get('/', function (req, res) {
 
     });
 
+app.post('/cricket_match', function (req, res) {
+    cricket_match. totalScore({
+        currentScore: cricket_match. totalScore()
+  });
+   res.redirect('/');
+});
+
     const PORT = process.env.PORT || 4000;
 
     app.listen(PORT, function () {
