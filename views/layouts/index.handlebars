@@ -1,13 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
+    <link rel="stylesheet" href="css/cricket-match.css">
+ 
 </head>
+</head>
+
 <body>
-    
-      {{!-- <input type="text" name="" class="textBox" value="" placeholder="Enter name"> --}}
+    <div class="container">
+        <div class="row">
+            <div class="heading">
+                <div class="row">
+
+                    <h3> Cricket Match</h3>
+                </div>
+            </div>
+            <div class="inputeArea">
+                <div class="row">
+                    <input type="text" name="" placeholder="Enter score">
+                    <button type="button">add score button</button>
+                </div>
+            </div>
+
+            <div class="scores">
+                <div class="row">
+                    </form>
+                    <h5>Scores</h5>
+                    <table>
+                        <tr>
+                            <td>
+                            <h4> Total score</h4>
+                            </td>
+                            <td><h5 class="totalScore">{{totalScore.currentScore}}</h5 ></td>
+                        </tr>
+                        <tr>
+                            <td>
+                               <h4>Current score</h4>
+                            </td>
+                            <td><h5 class="currentScore">{{totalScore.currentScore}}</h5 ></td>
+                        </tr>
+                        <tr>
+                            <td>
+                               <h4>wickets are still available</h4>
+                            </td>
+                            <td> <h5 class="wickets"></h5>{{getwicket.wicket}} </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
+
 </html>

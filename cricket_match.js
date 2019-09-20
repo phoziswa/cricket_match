@@ -1,15 +1,32 @@
-module.export = function CricketScoreKeeper(){
+module.exports = function CricketScoreKeeper() {
 
-    var score = [];
-    var overs = [0,1, 2, 3, 4, 6, w ] || scored;
-    var wickets = 0;
+    var currentScore = 0;
+    var wicket = 0;
 
-    function addScore(scored){
-     if(overs == 1 || 2 || 3 || 4 || 5 || 6){
-         score.push(over)
-     }
+    function addScore(string) {
+       var score = string.split('');
+        for (var i = 0; i < score.length; i++) {
+            const element = score[i]
+            if (element === "w") {
+               wicket++;
+            }
+            if(element === "-"){
+               return 0;
+            }
+
+            currentScore += Number(element);   
+        }
     }
-    return{
+    function totalScore(){
+       return currentScore;
+    }
+    function getwicket(){
+        return wicket ;
+    }
+
+    return {
         addScore,
+        totalScore,
+        getwicket
     }
 }
